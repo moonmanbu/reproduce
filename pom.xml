@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.test</groupId>
+  <artifactId>test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>My Awesome Application</name>
+
+  <parent>
+    <groupId>org.actframework</groupId>
+    <artifactId>act-starter-parent</artifactId>
+    <version>1.8.32.0</version>
+  </parent>
+
+  <properties>
+    <!-- remove the following line if you are on Java 7-->
+    <java.version>1.8</java.version>
+    <app.entry>com.test.AppEntry</app.entry>
+
+    <!-- tune your JVM arguments here
+    <vmargs.heap.init>256M</vmargs.heap.init>
+    <vmargs.heap.max>2G</vmargs.heap.max>
+    <vmargs.extended />
+    -->
+
+    <!-- set your docker configuration here if needed
+    <docker.repo>org.actframework/archetype-simple-restful-service</docker.repo>
+    <docker.profile>prod</docker.profile>
+    <docker.group>default</docker.group>
+    <docker.http.port>5460</docker.http.port>
+    <docker.cli.port>5461</docker.cli.port>
+    -->
+
+    <!-- lombok support
+    <act.lombok>/path/to/lombok.jar</act.lombok>
+    -->
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>caarmen-repo</id>
+      <url>https://dl.bintray.com/caarmen/maven/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!-- add your dependencies here -->
+
+    <!-- 日出日落计算 -->
+    <dependency>
+      <groupId>ca.rmen</groupId>
+      <artifactId>lib-sunrise-sunset</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.actframework</groupId>
+      <artifactId>act-starter-hibernate-all</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.bval</groupId>
+      <artifactId>org.apache.bval.bundle</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <!--连接池 组新版3.3.1-->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>${HikariCP.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mariadb.jdbc</groupId>
+      <artifactId>mariadb-java-client</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+
+    <!--h2驱动-->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.192</version>
+    </dependency>
+
+  </dependencies>
+
+</project>
